@@ -3,7 +3,7 @@ pipeline{
         stages{
             stage('Clone Repo'){
                 steps{
-                    git branch: '*/main', url: 'https://github.com/RyanS186/jenkins-pipeline-script'
+                    git branch: 'main', url: 'https://github.com/RyanS186/jenkins-pipeline-script'
                 }
             }
             stage('Run script'){
