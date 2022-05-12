@@ -8,14 +8,13 @@ pipeline{
             }
             stage('Run script'){
                 steps{
-		    sh 'chmod +x myscript'
-                    sh './myscript.sh'
+                    sh 'sh ./myscript.sh'
                 }
             }
 	    stage('Archive file'){
 		steps{
 		    archiveArtifacts artifacts: 'output', followSymlinks: false
-	    	}
+		}
             }
 	}
 }
