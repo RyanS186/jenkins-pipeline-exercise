@@ -8,7 +8,8 @@ pipeline{
             }
             stage('Run script'){
                 steps{
-                    sh "./myscript.sh"
+		    sh 'chmod +x myscript'
+                    sh './myscript.sh'
                 }
             }
 	    stage('Archive file'){
